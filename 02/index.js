@@ -1,3 +1,5 @@
+console.time("Execution time");
+
 const fs = require("fs");
 
 const input = fs.readFileSync(__dirname + "/input.txt");
@@ -49,8 +51,10 @@ for (const game of games) {
     gameSum += game.gameId;
   }
 
-  powerSum += lowestColorCount.red * lowestColorCount.green * lowestColorCount.blue;
+  powerSum +=
+    lowestColorCount.red * lowestColorCount.green * lowestColorCount.blue;
 }
 
 console.log("Part One:", gameSum);
 console.log("Part Two:", powerSum);
+console.timeEnd("Execution time");

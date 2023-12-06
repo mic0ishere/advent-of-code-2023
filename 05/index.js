@@ -1,3 +1,5 @@
+console.time("Execution time");
+
 const fs = require("fs");
 
 const input = fs.readFileSync(__dirname + "/input.txt", "utf-8");
@@ -73,3 +75,4 @@ for (const [seedStart, seedEnd] of seedsPairs) {
 
 console.log("Part One:", partOne);
 console.log("Part Two:", partTwo);
+console.timeEnd("Execution time");

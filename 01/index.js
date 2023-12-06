@@ -1,3 +1,5 @@
+console.time("Execution time");
+
 const fs = require("fs");
 
 const input = fs.readFileSync(__dirname + "/input.txt");
@@ -31,7 +33,7 @@ const numberDictionary = {
   nine: 9,
 };
 
-let linesTwo = input.toString().replaceAll("\r", "")
+let linesTwo = input.toString().replaceAll("\r", "");
 for (const dictionary of Object.entries(numberDictionary)) {
   linesTwo = linesTwo.replaceAll(dictionary[0], dictionary[1]);
 }
@@ -40,3 +42,4 @@ const partTwo = countFromLines(linesTwo.split("\n"));
 
 console.log("Part One:", partOne);
 console.log("Part Two:", partTwo);
+console.timeEnd("Execution time");

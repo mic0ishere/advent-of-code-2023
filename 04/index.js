@@ -1,3 +1,5 @@
+console.time("Execution time");
+
 const fs = require("fs");
 
 const input = fs.readFileSync(__dirname + "/input.txt");
@@ -43,3 +45,4 @@ const partTwo = cards.reduce((acc, current, index) => {
 
 console.log("Part One:", partOne);
 console.log("Part Two:", partTwo);
+console.timeEnd("Execution time");

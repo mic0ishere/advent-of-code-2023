@@ -1,3 +1,5 @@
+console.time("Execution time");
+
 const fs = require("fs");
 
 const input = fs.readFileSync(__dirname + "/input.txt");
@@ -118,3 +120,4 @@ for (let yAxis = 0; yAxis < lines.length; yAxis++) {
 
 console.log("Part one: " + partOne);
 console.log("Part two: " + partTwo);
+console.timeEnd("Execution time");
